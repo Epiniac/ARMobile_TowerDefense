@@ -1,0 +1,51 @@
+# Unity-generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# AR Foundation sample-specific
+Assets/AssetStoreTools*
+Packages/packages-lock.json
+
+# Visual Studio and JetBrains Rider
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.idea/
+.vsconfig
+
+# Unity crash reports
+sysinfo.txt
+
+# Build artifacts
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Addressables
+Assets/AddressableAssetsData/*/*.bin*
+
+# StreamingAssets (optional, if auto-generated)
+Assets/StreamingAssets/aa.meta
+Assets/StreamingAssets/aa/*
+
+# OS-specific files
+.DS_Store
