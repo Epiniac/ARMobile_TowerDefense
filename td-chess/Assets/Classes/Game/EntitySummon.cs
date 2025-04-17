@@ -12,5 +12,6 @@ public class EntitySummon : MonoBehaviour
         EnemyPrefabs = new Dictionary<int, GameObject>();
         EnemyObjectPools = new Dictionary<int, Queue<Enemy>>();
         EnemiesInGame = new List<Enemy>();
+        
     }
 }
