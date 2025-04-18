@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8941703138714433748
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 129070283822696277, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: cost
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 129070283822696277, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 129070283822696277, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 129070283822696277, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: fireRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 129070283822696277, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: towerName
+      value: Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 129070283822696277, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5079654605585979836, guid: b86cb1b0b7ed3ae42b9070610ec92d73,
+        type: 3}
+    - target: {fileID: 367337141779453990, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_Name
+      value: Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 730691083263216798, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 730691083263216798, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5079654605585979836, guid: b86cb1b0b7ed3ae42b9070610ec92d73,
+        type: 3}
+    - target: {fileID: 1032128623297036956, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.2882977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032128623297036956, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032128623297036956, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.371747
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660026339828040718, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_Name
+      value: Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.305866
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.4656315
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432199695694454452, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307479804684497975, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      propertyPath: m_Radius
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 730691083263216798, guid: b205371c16920fa40b0aef8a71121927, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 367337141779453990, guid: b205371c16920fa40b0aef8a71121927,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8449505007693194689}
+  m_SourcePrefab: {fileID: 100100000, guid: b205371c16920fa40b0aef8a71121927, type: 3}
+--- !u!4 &1026209281481090847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8226559496524275659, guid: b205371c16920fa40b0aef8a71121927,
+    type: 3}
+  m_PrefabInstance: {fileID: 8941703138714433748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8722984905182798066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 367337141779453990, guid: b205371c16920fa40b0aef8a71121927,
+    type: 3}
+  m_PrefabInstance: {fileID: 8941703138714433748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8449505007693194689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722984905182798066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ff61e6d5972ea42bae79bee49135e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerName: Default Tower
+  cost: 1000
+  damage: 300
+  fireRate: 1.5
+  range: 6
+  projectilePrefab: {fileID: 5079654605585979836, guid: b86cb1b0b7ed3ae42b9070610ec92d73,
+    type: 3}
+  firePoint: {fileID: 1026209281481090847}
