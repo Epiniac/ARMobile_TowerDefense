@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
+    public bool loopShouldEnd;
     public GameObject winPanel;
     public GameObject gameOverPanel;
 
@@ -13,11 +13,6 @@ public class GameManager : MonoBehaviour
     public Text moneyText;
 
     public Player player;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     void Start()
     {
@@ -75,9 +70,33 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + player.score;
         moneyText.text = "Money: " + player.money;
     }
+    
+    IEnumerator GameLoop()
+    {
+        loopShouldEnd = false;
+        while (loopShouldEnd == false)
+        {
+            // Spawn ennemies
+        
+            // Spawn towers
+        
+            // Move ennemies
+        
+            // Tick towers
+        
+            // Apply effects
+        
+            // Damage ennemies
+        
+            // Remove ennemies
+        
+            // Remove towers
+
+            yield return null;
+        }
+    }
 }
 
-[System.Serializable]
 public class Player
 {
     public int lives { get; set; }
@@ -91,3 +110,4 @@ public class Player
         score = 0;
     }
 }
+
