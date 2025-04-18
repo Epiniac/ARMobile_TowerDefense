@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntitySummon : MonoBehaviour
+public class EntitySummoner : MonoBehaviour
 {
     public static List<Enemy> EnemiesInGame;
     public static Dictionary<int, GameObject> EnemyPrefabs;
@@ -13,5 +13,7 @@ public class EntitySummon : MonoBehaviour
         EnemyObjectPools = new Dictionary<int, Queue<Enemy>>();
         EnemiesInGame = new List<Enemy>();
         
+        EnemySummonData[] Enemies = Resources.LoadAll<EnemySummonData>("Enemies");
+        Debug.Log(Enemies[0].name);
     }
 }
