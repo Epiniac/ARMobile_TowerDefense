@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,12 +15,22 @@ public class GameManager : MonoBehaviour
 
     public Player player;
 
-    void Start()
+    private static Queue<int> EnemyIDsToSummon;
+
+    public void Start()
     {
+        EnemyIDsToSummon = new Queue<int>();
         player = new Player();
         winPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         UpdateUI();
+
+        EntitySummoner.Init();
+        
+        StartCoroutine(GameLoop());
+        // Test summoning enemies
+        InvokeRepeating("SummonTest", 0f, 1f);
+        InvokeRepeating("RemoveTest", 0f, 0.5f);
     }
 
     public void AddScore(int amount)
@@ -70,13 +81,33 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + player.score;
         moneyText.text = "Money: " + player.money;
     }
+
+    void RemoveTest()
+    {
+        if (EntitySummoner.EnemiesInGame.Count > 0)
+        {
+            EntitySummoner.RemoveEnemy(EntitySummoner.EnemiesInGame[Random.Range(0, EntitySummoner.EnemiesInGame.Count)]);
+        }
+    }
+    void SummonTest()
+    {
+        EnqueueEnemy(0);
+    }
     
     IEnumerator GameLoop()
     {
         loopShouldEnd = false;
         while (loopShouldEnd == false)
         {
+            EnqueueEnemy(0); // Test summoning enemies
             // Spawn ennemies
+            if (EnemyIDsToSummon.Count > 0)
+            {
+                for (int i = 0; i < EnemyIDsToSummon.Count; i++)
+                {
+                    EntitySummoner.SummonEnemy(EnemyIDsToSummon.Dequeue());
+                }
+            }
         
             // Spawn towers
         
@@ -94,6 +125,11 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public static void EnqueueEnemy(int enemyID)
+    {
+        EnemyIDsToSummon.Enqueue(enemyID);
     }
 }
 
