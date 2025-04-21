@@ -49,3 +49,6 @@ Assets/StreamingAssets/aa/*
 
 # OS-specific files
 .DS_Store
+
+# Builds
+build-td-chess
