@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3558118051163944516}
-  - component: {fileID: 617512477602104931}
   - component: {fileID: 2972974738327280063}
+  - component: {fileID: 3655595769375146458}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -152,26 +152,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2329052042958981688}
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
---- !u!114 &617512477602104931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8542856202362902883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ff61e6d5972ea42bae79bee49135e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerName: Default Tower
-  cost: 100
-  damage: 50
-  fireRate: 1
-  range: 10
-  projectilePrefab: {fileID: 1582997429401245311, guid: 58aae3c646762b940b734866b010f328,
-    type: 3}
-  firePoint: {fileID: 7227440242627878128}
 --- !u!135 &2972974738327280063
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -193,3 +173,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3655595769375146458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542856202362902883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4caf7b964541734890f7eacfcbbc3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  fireRate: 1
+  damagePerSecond: 10
+  firePoint: {fileID: 7227440242627878128}
+  flameEffectPrefab: {fileID: 3556118342434425424, guid: b0ce43157a4445e4d805c396e5ea9736,
+    type: 3}

@@ -42,6 +42,7 @@ public class Tower : MonoBehaviour
 
         fireCountdown -= Time.deltaTime;
 
+        // Tourne la tour vers sa cible
         Vector3 dir = currentTarget.position - transform.position;
         dir.y = 0;
         if (dir != Vector3.zero)
@@ -55,7 +56,10 @@ public class Tower : MonoBehaviour
         if (proj.TryGetComponent(out Projectile p)) p.SetDirection(currentTarget.position - firePoint.position);
         if (proj.TryGetComponent(out ProjectileFast f)) f.SetDirection(currentTarget.position - firePoint.position);
         if (proj.TryGetComponent(out ProjectileHeavy h)) h.SetDirection(currentTarget.position - firePoint.position);
-        if (proj.TryGetComponent(out ProjectileSplash s)) s.SetDirection(currentTarget.position - firePoint.position);
+        if (proj.TryGetComponent(out Projectilelaser laser)) laser.SetTarget(currentTarget, damage);
+        if (proj.TryGetComponent(out ProjectileAOE aoe)) aoe.SetTarget(currentTarget);
+        if (proj.TryGetComponent(out ProjectileMissile m)) m.SetTarget(currentTarget);
+
     }
 
     void OnTriggerExit(Collider other)
