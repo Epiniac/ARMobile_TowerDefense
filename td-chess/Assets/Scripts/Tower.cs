@@ -54,8 +54,6 @@ public class Tower : MonoBehaviour
         GameObject proj = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
         if (proj.TryGetComponent(out Projectile p)) p.SetDirection(currentTarget.position - firePoint.position);
-        if (proj.TryGetComponent(out ProjectileFast f)) f.SetDirection(currentTarget.position - firePoint.position);
-        if (proj.TryGetComponent(out ProjectileHeavy h)) h.SetDirection(currentTarget.position - firePoint.position);
         if (proj.TryGetComponent(out Projectilelaser laser)) laser.SetTarget(currentTarget, damage);
         if (proj.TryGetComponent(out ProjectileAOE aoe)) aoe.SetTarget(currentTarget);
         if (proj.TryGetComponent(out ProjectileMissile m)) m.SetTarget(currentTarget);
