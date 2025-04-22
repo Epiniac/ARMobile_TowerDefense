@@ -8,15 +8,16 @@ using Unity.Collections;
 using Unity.Burst;
 using Unity.Mathematics;
 using Unity.Collections.LowLevel.Unsafe;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject winPanel;
     public GameObject gameOverPanel;
 
-    public Text livesText;
-    public Text scoreText;
-    public Text moneyText;
+    public TMP_Text livesText;
+    public TMP_Text scoreText;
+    public TMP_Text moneyText;
 
     public Player player;
 
