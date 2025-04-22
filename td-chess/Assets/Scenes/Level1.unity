@@ -26508,7 +26508,7 @@ MonoBehaviour:
   livesText: {fileID: 688414451}
   scoreText: {fileID: 593610116}
   moneyText: {fileID: 587026362}
-  NodeParent: {fileID: 0}
+  NodeParent: {fileID: 1712930609}
   loopShouldEnd: 0
 --- !u!4 &1178992931
 Transform:
@@ -26519,7 +26519,7 @@ Transform:
   m_GameObject: {fileID: 1178992929}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.53, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37952,7 +37952,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712930609}
-  - component: {fileID: 1712930611}
   - component: {fileID: 1712930610}
   m_Layer: 0
   m_Name: Nodes
@@ -38001,25 +38000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d61357be569f34a6b98000f1a9d1aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1712930611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712930608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62c3b8b823bc9941b9a28f26f93c6b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winPanel: {fileID: 0}
-  gameOverPanel: {fileID: 0}
-  livesText: {fileID: 0}
-  scoreText: {fileID: 0}
-  moneyText: {fileID: 0}
-  NodeParent: {fileID: 0}
-  loopShouldEnd: 1
 --- !u!1 &1716316733
 GameObject:
   m_ObjectHideFlags: 0
