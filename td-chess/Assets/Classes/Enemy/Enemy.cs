@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy : MonoBehaviour
+{
+    public float MaxHealth;
+    public float Health;
+    public float Speed;
+    public int ID;
+    public int NodeIndex;
+    public void Init()
+    {
+        Health = MaxHealth;
+        transform.position = GameManager.NodePositions[0];
+        NodeIndex = 0;
+    }
+}
