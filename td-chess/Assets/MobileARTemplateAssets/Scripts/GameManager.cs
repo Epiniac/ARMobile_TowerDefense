@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
         
         StartCoroutine(GameLoop());
-        StartCoroutine(SummonEnemy(10, 1f));
+        StartCoroutine(SummonEnemy(1f));
     }
 
     public void AddScore(int amount)
@@ -96,11 +96,6 @@ public class GameManager : MonoBehaviour
         livesText.text = "Lives: " + player.lives;
         scoreText.text = "Score: " + player.score;
         moneyText.text = "Money: " + player.money;
-    }
-
-    void SummonTest()
-    {
-        EnqueueEnemyIDToSummon(0);
     }
     
 
@@ -163,7 +158,7 @@ public class GameManager : MonoBehaviour
                 for (int i = 0; i < EnemiesToRemove.Count; i++)
                 {
                     EntitySummoner.RemoveEnemy(EnemiesToRemove.Dequeue());
-                    LoseLife(); // Optional: deduct life when an enemy reaches the end
+                    LoseLife();
                 }
             }
 
@@ -181,13 +176,20 @@ public class GameManager : MonoBehaviour
         EnemiesToRemove.Enqueue(EnemyToRemove);
     }
 
-    IEnumerator SummonEnemy(int n , float delay)
+    IEnumerator SummonEnemy(float delay)
     {
+        int EnemyID1 = 1;
+        int EnemyID2 = 2;
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < 10; i++)
         {
-            EnqueueEnemyIDToSummon(2);
+            EnqueueEnemyIDToSummon(EnemyID1);
             yield return new WaitForSeconds(delay);
+        }
+        for (int i = 0; i < 10; i++)
+        {
+            EnqueueEnemyIDToSummon(EnemyID2);
+            yield return new WaitForSeconds(delay + 0.5f);
         }
     }
 }

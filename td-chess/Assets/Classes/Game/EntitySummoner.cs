@@ -51,6 +51,7 @@ public class EntitySummoner : MonoBehaviour
             else{
                 GameObject NewEnemy = Instantiate(EnemyPrefabs[EnemyID], GameManager.NodePositions[0], Quaternion.identity);
                 SummonedEnemy = NewEnemy.GetComponent<Enemy>();
+                //SummonedEnemy.transform.LookAt()
                 SummonedEnemy.Init();
             }
         }
