@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class ProjectileShotgun : MonoBehaviour
@@ -21,7 +20,12 @@ public class ProjectileShotgun : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Pellet hit: " + other.name);
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+
             Destroy(gameObject);
         }
     }

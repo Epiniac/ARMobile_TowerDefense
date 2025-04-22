@@ -14,14 +14,18 @@ public class Projectilelaser : MonoBehaviour
 
         if (target != null)
         {
+            // Ligne laser visuelle
             lineRenderer.SetPosition(0, transform.position);
             lineRenderer.SetPosition(1, target.position);
 
-            // On tente d'appliquer des dégâts, seulement si l'ennemi a un composant EnemyHealth
-            var enemyHealth = target.GetComponent<MonoBehaviour>();
-            enemyHealth?.Invoke("TakeDamage", damage);
+            // Infliger les dégâts à l'ennemi
+            Enemy enemyComponent = target.GetComponent<Enemy>();
+            if (enemyComponent != null)
+            {
+                enemyComponent.TakeDamage(damage);
+            }
 
-            // Effet visuel temporaire
+            // Effet temporaire
             Destroy(gameObject, 0.1f);
         }
     }

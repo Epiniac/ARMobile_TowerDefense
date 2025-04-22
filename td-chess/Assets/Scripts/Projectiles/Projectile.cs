@@ -25,7 +25,15 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Projectile hit!");
+            Debug.Log("Projectile hit enemy!");
+
+            // Infliger les dégâts
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+
             Destroy(gameObject);
         }
     }

@@ -18,10 +18,11 @@ public class ProjectileMissile : MonoBehaviour
     {
         if (target == null)
         {
-            Destroy(gameObject); return;
+            Destroy(gameObject);
+            return;
         }
 
-        // Direction vers la cible
+        // Suivi de la cible
         Vector3 direction = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(direction.normalized);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, rotateSpeed * Time.deltaTime);
@@ -33,7 +34,11 @@ public class ProjectileMissile : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
 
             if (explosionEffect != null)
             {

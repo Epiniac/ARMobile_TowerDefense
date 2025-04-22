@@ -46,7 +46,11 @@ public class ProjectileAOE : MonoBehaviour
         {
             if (hit.CompareTag("Enemy"))
             {
-                hit.gameObject.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+                Enemy enemy = hit.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(damage);
+                }
             }
         }
 

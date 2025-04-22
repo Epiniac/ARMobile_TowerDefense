@@ -15,4 +15,23 @@ public class Enemy : MonoBehaviour
         transform.position = GameManager.NodePositions[0];
         NodeIndex = 0;
     }
+
+    public void TakeDamage(float amount)
+    {
+        Health -= amount;
+
+        if (Health <= 0f)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // Futur rajout de fx ou son ici
+        Destroy(gameObject);
+    }
+
 }
+
+

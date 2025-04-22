@@ -1,10 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class KingTower : MonoBehaviour
 {
     public float range = 5f;
     public float fireRate = 1f;
     public float damagePerSecond = 20f;
+
     public Transform firePoint;
     public GameObject flameEffectPrefab;
 
@@ -17,8 +18,10 @@ public class KingTower : MonoBehaviour
 
         if (currentTarget != null)
         {
+            // La tour regarde sa cible
             transform.LookAt(currentTarget);
 
+            // Instancie la flamme si pas encore active
             if (currentFlame == null)
             {
                 currentFlame = Instantiate(flameEffectPrefab, firePoint.position, firePoint.rotation, firePoint);
@@ -27,16 +30,20 @@ public class KingTower : MonoBehaviour
                     follow.SetTarget(currentTarget);
             }
 
-            // Orientation constante vers la cible
+            // Le firePoint suit la cible, la flamme suit le firePoint
             firePoint.LookAt(currentTarget);
             currentFlame.transform.position = firePoint.position;
 
-            // Infliger des d�g�ts en continu
-            var health = currentTarget.GetComponent<MonoBehaviour>();
-            health?.Invoke("TakeDamage", damagePerSecond * Time.deltaTime);
+            // Infliger les dégâts continus
+            Enemy enemy = currentTarget.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damagePerSecond * Time.deltaTime);
+            }
         }
         else
         {
+            // Plus de cible → arrêter l’effet de feu
             if (currentFlame != null)
             {
                 var ps = currentFlame.GetComponent<ParticleSystem>();
